@@ -13,3 +13,7 @@
   margin: 0 auto;
   position: relative;
 }
+
+.header__toggle {
+  display: none;
+}

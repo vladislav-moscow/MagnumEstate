@@ -1,0 +1,29 @@
+.header__langs a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border: 1px solid transparent;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background: none;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+  margin: 0 5px;
+}
+
+.header__langs a:hover, 
+.header__langs a.active {
+  border-color: #fff;
+}

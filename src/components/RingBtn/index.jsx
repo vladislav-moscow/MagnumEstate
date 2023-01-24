@@ -1,11 +1,11 @@
 import React from 'react';
 
-import './ringBtn.css';
+import './RingBtn.css';
 
 function RingBtn() {
   return (
     <>
-      
+      <button className='header__callback' href="#popup">Заказать звонок</button>
     </>
   );
 }
