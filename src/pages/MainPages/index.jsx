@@ -29,7 +29,55 @@ function MainPages() {
               </a>
             </div>
           </section>
-          <section className='' id='about'></section>
+          <section className='adbox' id='about'>
+            <div className="wrapper">
+              <div className="adbox__box flex">
+                <div className="adbox__left"></div>
+                <div className="adbox__info">
+                  <h2 className='adbox__title animate_fade_in delay2 fade_in'>Бали</h2>
+                  <p className="adbox__text"><b>Cамое желанное </b>
+                    туристическое направление в мире по версии многих авторитетных порталов.<br />
+                    С каждым годом райский остров стремительно набирает еще большую популярность 
+                    среди туристов и экспатов, что выводит его в мировой ТОП по инвестиционной 
+                    привлекательности.
+                  </p>
+                  <p className="adbox__text"><b>На Бали созданы все условия для жизни, отдыха и бизнеса.</b></p>
+                  <div className="adbox__btns flex">
+                    <button className='btn2 adbox__btn adbox__btn_1' href='#mprice'>Скачать презентацию</button>
+                    <button className='btn3 adbox__btn adbox__btn_2' href='#popup'>Заказать звонок</button>
+                  </div>
+                  <div className="adbox__sales flex">
+                    <div className="adbox__sale flex">
+                      <span className='animate_fade_in delay2 fade_in'>12-15%</span>
+                      <p>Средняя <br /> доходность в год</p>
+                    </div>
+                    <div className="adbox__sale flex">
+                      <span className='animate_fade_in delay4 fade_in'>80%</span>
+                      <p>Средняя заполняемость  <br /> недвижимости в год</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section className="proe" id="proe">
+            <div className="wrapper">
+              <div className="proe__heading flex">
+                <img src="img/logo-gray.png" alt="logo" className='proe__logo' />
+                <div className="proe__hright">
+                  <div className="proe__title">
+                    <span className='animate_fade_in delay2 fade_in'>ОТКРОЙТЕ</span>
+
+                  </div>
+                  <p className="proe__htext">Для себя мир <b>премиальной недвижимости</b><br />
+                    На главном мировом курорте о.Бали от девелопера
+                    <b>Magnum Estate</b>
+                  </p>
+                </div>
+              </div>
+              
+            </div>
+          </section>
         </div>
       </main>
     </>

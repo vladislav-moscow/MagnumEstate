@@ -192,3 +192,128 @@
   display: block;
   width: 100%;
 }
+
+.adbox {
+  position: relative;
+  z-index: 2;
+}
+
+.adbox .wrapper {
+  z-index: 2;
+}
+
+.adbox__box.flex {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.adbox__box {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 20px 60px rgb(0 0 0 / 15%);
+  box-shadow: 0px 20px 60px rgb(0 0 0 / 15%);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.adbox__left {
+  width: 33%;
+  background: url(img/banner-left.jpg) center center/cover no-repeat;
+}
+
+.adbox__info {
+  width: 66%;
+  padding: 90px 130px 90px 50px;
+}
+
+.adbox__title {
+  display: inline-block;
+  margin-bottom: 20px;
+  background: -o-linear-gradient(2.31deg, #22577B 0.5%, #7A4F76 65.28%, #D2917A 104.49%);
+  background: linear-gradient(87.69deg, #22577B 0.5%, #7A4F76 65.28%, #D2917A 104.49%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 61px;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+}
+
+.adbox__text {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 1.2;
+  color: #202020;
+  margin-bottom: 20px;
+}
+
+.adbox__text b {
+  font-weight: 600;
+}
+
+.adbox__btns {
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+
+.adbox__btn {
+  margin-right: 20px;
+}
+
+.adbox__sale:first-child {
+  margin-right: 30px;
+}
+
+.adbox__sale span {
+  background: -o-linear-gradient(2.31deg, #22577B 0.5%, #7A4F76 65.28%, #D2917A 104.49%);
+  background: linear-gradient(87.69deg, #22577B 0.5%, #7A4F76 65.28%, #D2917A 104.49%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 73px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.adbox__sale p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  margin-left: 10px;
+}
+
+.btn2:hover {
+  transform: scale(1.1);
+}
+
+.btn3:hover {
+  background: #202020;
+  color: #fff;
+}
+
+.proe {
+  padding: 50px 0 100px;
+  overflow: hidden;
+}
+
+.proe__logo {
+  width: 325px;
+}
+
+.proe__hright {
+  width: 850px;
+}
+
+.proe__title {
+  position: relative;
+}

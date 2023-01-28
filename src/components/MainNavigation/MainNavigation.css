@@ -55,3 +55,7 @@
   line-height: 150%;
   color: #FFFFFF;
 }
+
+.header__nav ul li:last-child {
+  margin-right: 0;
+}

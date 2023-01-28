@@ -12,7 +12,7 @@ function MainNavigation() {
           <li> <a href="#proe" className='anchor'>Проекты</a></li>
           <li> <a href="#special" className='anchor'>Условия для инвестора</a></li>
           <li> <a href="#abus" className='anchor'>Виллы</a></li>
-          <li> <a href="#abus" className='anchor'>Аппартаменты</a></li>
+          <li> <a href="#abus" className='anchor'>Апартаменты</a></li>
         </ul>
       </nav>
     </>
