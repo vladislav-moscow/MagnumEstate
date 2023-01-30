@@ -75,7 +75,82 @@ function MainPages() {
                   </p>
                 </div>
               </div>
-              
+              <div className="proe__box flex">
+                <a href="#" className="proe__item big">
+                  <div className="proe__image proe__image-1"></div>
+                  <div className="proe__info">
+                    <span className="proe__name">The Umalas Signature</span>
+                    <p className="proe__price">от $175 000</p>
+                    <p className="proe__text">Самый современный и технологичный комплекс апартаментов в 
+                      главной туристической локации о. Бали
+                    </p>
+                    <span className="proe__more">
+                      <img src="img/more2.png" alt="подробнее" />
+                    </span>
+                  </div>
+                </a>
+                <a href="#" className="proe__item">
+                  <div className="proe__image proe__image-2"></div>
+                  <div className="proe__info">
+                    <span className="proe__name">Sky Stars Ocean View</span>
+                    <p className="proe__price">от $360 000</p>
+                    <p className="proe__text">Уникальные настоящие Luxury виллы в калифорнийском стиле с видом на океан</p>
+                    <span className="proe__more">
+                      <img src="img/more2.png" alt="подробнее" />
+                    </span>
+                  </div>
+                </a>
+                <a href="#" className="proe__item">
+                  <div className="proe__image proe__image-3"></div>
+                  <div className="proe__info">
+                    <span className="proe__name">Sky Stars Luxury Villas</span>
+                    <p className="proe__price">от $740 000</p>
+                    <p className="proe__text">Роскошные виллы расположенные в закрытой резиденции привилегированного района Бали</p>
+                    <span className="proe__more">
+                      <img src="img/more2.png" alt="подробнее" />
+                    </span>
+                  </div>
+                </a>
+                <a href="#" className="proe__item big">
+                  <div className="proe__image proe__image-4"></div>
+                  <div className="proe__info">
+                    <span className="proe__name">Sky Stars Royal Villas</span>
+                    <p className="proe__price">от $1 690 000</p>
+                    <p className="proe__text">Феноменальная роскошь, новый стандарт премиум недвижимости на о.Бали. 
+                      Luxury виллы в закрытой резиденции.
+                    </p>
+                    <span className="proe__more">
+                      <img src="img/more2.png" alt="подробнее" />
+                    </span>
+                  </div>
+                </a>
+                <a href="#" className="proe__item big">
+                  <div className="proe__image proe__image-5"></div>
+                  <div className="proe__info">
+                    <span className="proe__name">Magnum&nbsp;Residence Sanur</span>
+                    <p className="proe__price">от $490 000</p>
+                    <p className="proe__text">Первый ROYAL комплекс апартаментов на берегу океана о.Бали.
+                      Проект с непревзойденной роскошью и удобствами
+                    </p>
+                    <span className="proe__more">
+                      <img src="img/more2.png" alt="подробнее" />
+                    </span>
+                  </div>
+                </a>
+                <a href="#" className="proe__item">
+                  <div className="proe__image proe__image-6"></div>
+                  <div className="proe__info">
+                    <span className="proe__name">Alam Villas</span>
+                    <p className="proe__price">от $575 000</p>
+                    <p className="proe__text">Комплекс премиальных вилл для жизни и инвестиций в 
+                      главной туристической локации Бали - районе Умалас
+                    </p>
+                    <span className="proe__more">
+                      <img src="img/more2.png" alt="подробнее" />
+                    </span>
+                  </div>
+                </a>
+              </div>
             </div>
           </section>
         </div>

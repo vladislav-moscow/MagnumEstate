@@ -379,12 +379,6 @@
   margin-top: 45px;
 }
 
-.proe__box.flex {
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
 .proe__item {
   width: 33%;
   height: 400px;
@@ -439,14 +433,14 @@
 }
 
 .proe__image-4 {
-  background: url(img/proe4.jpeg) center center/cover no-repeat;
+  background: url(img/proe4.jpg) center center/cover no-repeat;
 }
 
 .proe__image-5 {
   background: url(img/proe5.jpg) center center/cover no-repeat;
 }
 
-.proe__image-6 {
+.proe__image-5 {
   background: url(img/proe6.jpg) center center/cover no-repeat;
 }
 
