@@ -37,13 +37,6 @@
   }
 }
 
-.wrapper {
-  min-width: 290px;
-  max-width: 1360px;
-  margin: 0 auto;
-  position: relative;
-}
-
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;

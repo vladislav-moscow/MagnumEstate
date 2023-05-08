@@ -1,12 +1,13 @@
 import './App.css';
 import Header from './components/Header';
-import MainPages from './pages/MainPages';
+import Home from './pages/Home/Home';
 
 function App() {
   return (
     <>
-    <MainPages/>
+    
     <Header/>
+    <Home/>
     </>
   );
 }
