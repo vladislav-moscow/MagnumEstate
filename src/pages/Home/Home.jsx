@@ -3,9 +3,21 @@ import { useState } from "react";
 import "./home.css";
 import QuizModuleOne from "../../modules/QuizModuleOne/QuizModuleOne";
 import QuizStep from "../../components/QuizStep/QuizStep";
+import QuizModuleTwo from "../../modules/QuizModuleTwo/QuizModuleTwo";
+import QuizModuleThree from "../../modules/QuizModuleThree/QuizModuleThree";
 
 function Home() {
   const [activeForm, setActiveForm] = useState(1);
+  const [formsValue, setFormsValue] = useState({});
+  
+  const handleFormsValue = (value) => {
+    setFormsValue(prev => {
+      return {
+        ...prev,
+        ...value
+      }
+    })
+  }
 
   const nextStepCount = () => {
     setActiveForm((prev) => ++prev)
@@ -237,7 +249,9 @@ function Home() {
           <section className="quiz">
             <div className="wrapper">
               <div className="quiz__box flex">
-                {activeForm === 1 && <QuizModuleOne nextStep={handleClickNextStep} />}
+                {activeForm === 1 && <QuizModuleOne nextStep={handleClickNextStep} changeFormsValue={handleFormsValue} />}
+                {activeForm === 2 && <QuizModuleTwo nextStep={handleClickNextStep} changeFormsValue={handleFormsValue} />}
+                {activeForm === 3 && <QuizModuleThree nextStep={handleClickNextStep} changeFormsValue={handleFormsValue} />}
                 <QuizStep stepForm={activeForm}/>
               </div>
             </div>
