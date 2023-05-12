@@ -1,11 +1,12 @@
 import { useState } from "react";
 import QuizFirst from "../../components/QuizFirst/QuizFirst";
-import "./quizModuleTwo.css";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import "./quizModuleFive.css";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack"
+import Slider from '@mui/material/Slider';
 
-function QuizModuleTwo({ changeFormsValue, nextStep }) {
+function QuizModuleFive({ changeFormsValue, nextStep }) {
   const [inputsValue, setInputsValue] = useState({
-    investing: "",
+    budget: "",
   });
   const [active, setActive] = useState("");
 
@@ -32,32 +33,19 @@ function QuizModuleTwo({ changeFormsValue, nextStep }) {
         <div className="quiz__questions">
           <div className="quiz__question">
             <h2 className="quiz__questionname">
-              2. У вас уже есть опыт инвестирования в зарубежную недвижимость?
+              5. В рамках какого бюджета вы рассматриваете недвижимость?
             </h2>
             <div className="quiz__answers">
-              <div className="quiz__answer">
-                <input
-                  type="radio"
-                  id="ques2-1"
-                  name="investing"
-                  value="yes"
-                  className="custom-radio"
-                  onChange={handleChange}
-                  checked={active === "yes" ? true : false}
+              <div className="quiz__uislider">
+                <Slider
+                  defaultValue={50}
+                  aria-label="Default"
+                  valueLabelDisplay="auto"
+                  min={100000}
+                  max={1500000}
                 />
-                <label htmlFor="ques2-1">Да</label>
-              </div>
-              <div className="quiz__answer">
-                <input
-                  type="radio"
-                  id="ques2-2"
-                  name="investing"
-                  value="no"
-                  className="custom-radio"
-                  onChange={handleChange}
-                  checked={active === "no" ? true : false}
-                />
-                <label htmlFor="ques2-2">Нет</label>
+                <div className="quiz__min">100 000$</div>
+                <div className="quiz__max">1 500 000$</div>
               </div>
             </div>
           </div>
@@ -79,4 +67,4 @@ function QuizModuleTwo({ changeFormsValue, nextStep }) {
   );
 }
 
-export default QuizModuleTwo;
+export default QuizModuleFive;

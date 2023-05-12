@@ -5,6 +5,10 @@ import QuizModuleOne from "../../modules/QuizModuleOne/QuizModuleOne";
 import QuizStep from "../../components/QuizStep/QuizStep";
 import QuizModuleTwo from "../../modules/QuizModuleTwo/QuizModuleTwo";
 import QuizModuleThree from "../../modules/QuizModuleThree/QuizModuleThree";
+import QuizModuleFour from "../../modules/QuizModuleFour/QuizModuleFour";
+import QuizModuleFive from "../../modules/QuizModuleFive/QuizModuleFive";
+import QuizModuleSix from "../../modules/QuizModuleSix/QuizModuleSix";
+import QuizModuleSeven from "../../modules/QuizModuleSeven/QuizModuleSeven";
 
 function Home() {
   const [activeForm, setActiveForm] = useState(1);
@@ -19,14 +23,11 @@ function Home() {
     })
   }
 
-  const nextStepCount = () => {
+  const handleClickNextStep = () => {
     setActiveForm((prev) => ++prev)
   }
 
-  const handleClickNextStep = (e) => {
-    e.preventDefault();
-    nextStepCount();
-  }
+  console.log(formsValue)
   return (
     <>
       <main className="content">
@@ -252,6 +253,10 @@ function Home() {
                 {activeForm === 1 && <QuizModuleOne nextStep={handleClickNextStep} changeFormsValue={handleFormsValue} />}
                 {activeForm === 2 && <QuizModuleTwo nextStep={handleClickNextStep} changeFormsValue={handleFormsValue} />}
                 {activeForm === 3 && <QuizModuleThree nextStep={handleClickNextStep} changeFormsValue={handleFormsValue} />}
+                {activeForm === 4 && <QuizModuleFour nextStep={handleClickNextStep} changeFormsValue={handleFormsValue} />}
+                {activeForm === 5 && <QuizModuleFive nextStep={handleClickNextStep} changeFormsValue={handleFormsValue} />}
+                {activeForm === 6 && <QuizModuleSix nextStep={handleClickNextStep} changeFormsValue={handleFormsValue} />}
+                {activeForm === 7 && <QuizModuleSeven nextStep={handleClickNextStep} changeFormsValue={handleFormsValue} />}
                 <QuizStep stepForm={activeForm}/>
               </div>
             </div>
