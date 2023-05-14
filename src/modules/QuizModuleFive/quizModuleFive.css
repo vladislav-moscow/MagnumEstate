@@ -3,3 +3,46 @@
   padding-bottom: 30px;
   padding-top: 40px;
 }
+
+.quiz__min {
+  font-size: 15px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50%;
+  text-align: left;
+}
+
+.quiz__max {
+  font-size: 15px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  text-align: right;
+}
+
+.slider {
+  color: white;
+}
+.css-14pt78w-MuiSlider-rail {
+  color: #fff;
+}
+.css-eg0mwd-MuiSlider-thumb {
+  cursor: pointer;
+  background: linear-gradient(87.69deg, #22577B 0.5%, #7A4F76 65.28%, #D2917A 104.49%);
+}
+.css-1gv0vcd-MuiSlider-track {
+  background: linear-gradient(87.69deg, #22577B 0.5%, #7A4F76 65.28%, #D2917A 104.49%);
+  color: linear-gradient(87.69deg, #22577B 0.5%, #7A4F76 65.28%, #D2917A 104.49%);
+}
+
+.css-nnid7-MuiSlider-valueLabel {
+  box-shadow: 0 1px 8px 0 rgb(0 0 0 / 20%);
+  text-align: center;
+  background-color: #fff;
+}
+
+.MuiSlider-valueLabelLabel {
+  font-size: 15px;
+}

@@ -19,8 +19,8 @@ function QuizModuleFive({ changeFormsValue, nextStep }) {
         [event.target.name]: event.target.value,
       };
     });
+    
   };
-
   const handleClick = (event) => {
     event.preventDefault();
     nextStep();
@@ -38,11 +38,13 @@ function QuizModuleFive({ changeFormsValue, nextStep }) {
             <div className="quiz__answers">
               <div className="quiz__uislider">
                 <Slider
-                  defaultValue={50}
+                  defaultValue={500000}
                   aria-label="Default"
                   valueLabelDisplay="auto"
                   min={100000}
                   max={1500000}
+                  name="budget"
+                  onChange={handleChange}
                 />
                 <div className="quiz__min">100 000$</div>
                 <div className="quiz__max">1 500 000$</div>
