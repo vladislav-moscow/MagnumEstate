@@ -4,24 +4,56 @@ import "./quizModuleSix.css";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 function QuizModuleSix({ changeFormsValue, nextStep }) {
+  const [activeInputValue, setActiveInputValue] = useState([])
   const [inputsValue, setInputsValue] = useState({
-    investing: "",
+    information: [],
   });
-  const [active, setActive] = useState("");
+const active = []
 
   const handleChange = (event) => {
-    setActive(event.target.value);
+    setActiveInputValue(event.target.value)
+    
+    /*setActiveInputValue(...active)
+    console.log(active)
+    
+    setInputsValue((prev) => {
+      return {
+        ...prev,
+
+        information: active
+      };
+    })
+    console.log(inputsValue)
     setInputsValue((prev) => {
       return {
         ...prev,
 
         [event.target.name]: event.target.value,
       };
-    });
+    });*/
   };
+  console.log(activeInputValue)
 
   const handleClick = (event) => {
     event.preventDefault();
+    setInputsValue((prev) => {
+      return {
+        ...prev,
+        [event.target.name]: active.forEach(el => {
+          setActiveInputValue(el)
+        })
+      }
+    })
+    /*setActiveInputValue([...active])
+    setInputsValue((prev) => {
+      return {
+        ...prev,
+
+        information: active
+      };
+    })
+    console.log(inputsValue)*/
+
     nextStep();
     changeFormsValue(inputsValue);
   };
@@ -39,7 +71,7 @@ function QuizModuleSix({ changeFormsValue, nextStep }) {
                 <input
                   type="checkbox"
                   id="ques6-1"
-                  name="ques6[]"
+                  name="information"
                   value="Информация об инвестиционной  привлекательности Бали"
                   className="custom-radio"
                   onChange={handleChange}
@@ -50,7 +82,7 @@ function QuizModuleSix({ changeFormsValue, nextStep }) {
                 <input
                   type="checkbox"
                   id="ques6-2"
-                  name="ques6[]"
+                  name="information"
                   value="Информация о проекте"
                   className="custom-radio"
                   onChange={handleChange}
@@ -61,7 +93,7 @@ function QuizModuleSix({ changeFormsValue, nextStep }) {
                 <input
                   type="checkbox"
                   id="ques6-3"
-                  name="ques6[]"
+                  name="information"
                   value="Формирование доходности"
                   className="custom-radio"
                   onChange={handleChange}
@@ -72,7 +104,7 @@ function QuizModuleSix({ changeFormsValue, nextStep }) {
                 <input
                   type="checkbox"
                   id="ques6-4"
-                  name="ques6[]"
+                  name="information"
                   value="Управление: сервисы и стоимость"
                   className="custom-radio"
                   onChange={handleChange}
@@ -83,7 +115,7 @@ function QuizModuleSix({ changeFormsValue, nextStep }) {
                 <input
                   type="checkbox"
                   id="ques6-5"
-                  name="ques6[]"
+                  name="information"
                   value="Документы на компанию"
                   className="custom-radio"
                   onChange={handleChange}
@@ -94,7 +126,7 @@ function QuizModuleSix({ changeFormsValue, nextStep }) {
                 <input
                   type="checkbox"
                   id="ques6-6"
-                  name="ques6[]"
+                  name="information"
                   value="Процесс оформления недвижимости на Бали"
                   className="custom-radio"
                   onChange={handleChange}
@@ -105,7 +137,7 @@ function QuizModuleSix({ changeFormsValue, nextStep }) {
                 <input
                   type="checkbox"
                   id="ques6-7"
-                  name="ques6[]"
+                  name="information"
                   value="Пример договора"
                   className="custom-radio"
                   onChange={handleChange}
@@ -116,7 +148,7 @@ function QuizModuleSix({ changeFormsValue, nextStep }) {
                 <input
                   type="checkbox"
                   id="ques6-8"
-                  name="ques6[]"
+                  name="information"
                   value="Хочу получить комплексную консультацию"
                   className="custom-radio"
                   onChange={handleChange}

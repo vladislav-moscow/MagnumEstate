@@ -3,7 +3,7 @@ import QuizFirst from "../../components/QuizFirst/QuizFirst";
 import "./quizModuleThree.css";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
-function QuizModuleThree({ changeFormsValue, nextStep }) {
+function QuizModuleThree({ changeFormsValue, nextStep, prevStep }) {
   const [inputsValue, setInputsValue] = useState({
     purpose: "",
   });
@@ -82,7 +82,7 @@ function QuizModuleThree({ changeFormsValue, nextStep }) {
         </div>
         <div className="quiz__btns flex">
           <button className="quiz__back flex">
-            <ArrowBackIcon />
+            <ArrowBackIcon onClick={prevStep} />
           </button>
           <button
             className="btn2 quiz__next"

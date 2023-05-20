@@ -1,17 +1,15 @@
 import { useState } from "react";
 import QuizFirst from "../../components/QuizFirst/QuizFirst";
 import "./quizModuleFive.css";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack"
-import Slider from '@mui/material/Slider';
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import Slider from "@mui/material/Slider";
 
-function QuizModuleFive({ changeFormsValue, nextStep }) {
+function QuizModuleFive({ changeFormsValue, nextStep, prevStep }) {
   const [inputsValue, setInputsValue] = useState({
     budget: "",
   });
-  const [active, setActive] = useState("");
 
   const handleChange = (event) => {
-    setActive(event.target.value);
     setInputsValue((prev) => {
       return {
         ...prev,
@@ -19,7 +17,6 @@ function QuizModuleFive({ changeFormsValue, nextStep }) {
         [event.target.name]: event.target.value,
       };
     });
-    
   };
   const handleClick = (event) => {
     event.preventDefault();
@@ -38,10 +35,10 @@ function QuizModuleFive({ changeFormsValue, nextStep }) {
             <div className="quiz__answers">
               <div className="quiz__uislider">
                 <Slider
-                  defaultValue={500000}
+                  defaultValue={50000}
                   aria-label="Default"
                   valueLabelDisplay="auto"
-                  min={100000}
+                  min={50000}
                   max={1500000}
                   name="budget"
                   onChange={handleChange}
@@ -54,7 +51,7 @@ function QuizModuleFive({ changeFormsValue, nextStep }) {
         </div>
         <div className="quiz__btns flex">
           <button className="quiz__back flex">
-            <ArrowBackIcon />
+            <ArrowBackIcon onClick={prevStep} />
           </button>
           <button
             className="btn2 quiz__next"

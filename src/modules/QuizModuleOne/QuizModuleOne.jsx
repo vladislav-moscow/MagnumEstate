@@ -1,28 +1,28 @@
 import { useState } from "react";
 import QuizFirst from "../../components/QuizFirst/QuizFirst";
 import "./quizModuleOne.css";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
-function QuizModuleOne({changeFormsValue, nextStep }) {
-  const [inputsValue, setInputsValue]= useState({
-    visited:"",
+function QuizModuleOne({ changeFormsValue, nextStep }) {
+  const [inputsValue, setInputsValue] = useState({
+    visited: "",
   });
-  const [active, setActive]= useState("");
-  
+  const [active, setActive] = useState("");
+
   const handleChange = (event) => {
-    setActive(event.target.value)
-    setInputsValue(prev => {
-      return  {...prev,
-        
-      [event.target.name]: event.target.value
-     } 
-  })
-  }
+    setActive(event.target.value);
+    setInputsValue((prev) => {
+      return {
+        ...prev,
+
+        [event.target.name]: event.target.value,
+      };
+    });
+  };
 
   const handleClick = (event) => {
     event.preventDefault();
     nextStep();
-    changeFormsValue(inputsValue)
+    changeFormsValue(inputsValue);
   };
   return (
     <>
@@ -60,10 +60,11 @@ function QuizModuleOne({changeFormsValue, nextStep }) {
           </div>
         </div>
         <div className="quiz__btns flex">
-          <button className="quiz__back flex">
-            <ArrowBackIcon />
-          </button>
-          <button className="btn2 quiz__next" onClick={handleClick} type="submit" >
+          <button
+            className="btn2 quiz__next"
+            onClick={handleClick}
+            type="submit"
+          >
             Далее
           </button>
         </div>

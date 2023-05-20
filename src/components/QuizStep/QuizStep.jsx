@@ -7,7 +7,7 @@ function QuizStep({stepForm}) {
         <div className="quiz__inside flex">
           <span className="quiz__current">{stepForm}</span>
           <span className="quiz__sep">/</span>
-          <span className="quiz__all">7</span>
+          <span className="quiz__all">6</span>
         </div>
       </div>
     </>

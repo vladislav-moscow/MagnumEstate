@@ -7,27 +7,29 @@ import QuizModuleTwo from "../../modules/QuizModuleTwo/QuizModuleTwo";
 import QuizModuleThree from "../../modules/QuizModuleThree/QuizModuleThree";
 import QuizModuleFour from "../../modules/QuizModuleFour/QuizModuleFour";
 import QuizModuleFive from "../../modules/QuizModuleFive/QuizModuleFive";
-import QuizModuleSix from "../../modules/QuizModuleSix/QuizModuleSix";
 import QuizModuleSeven from "../../modules/QuizModuleSeven/QuizModuleSeven";
+import Consultation from "../../modules/Consultation/Consultation";
 
 function Home() {
   const [activeForm, setActiveForm] = useState(1);
   const [formsValue, setFormsValue] = useState({});
-  
+
   const handleFormsValue = (value) => {
-    setFormsValue(prev => {
+    setFormsValue((prev) => {
       return {
         ...prev,
-        ...value
-      }
-    })
-  }
+        ...value,
+      };
+    });
+  };
 
   const handleClickNextStep = () => {
-    setActiveForm((prev) => ++prev)
-  }
+    setActiveForm((prev) => ++prev);
+  };
 
-  console.log(formsValue)
+  const handleClickPrevStep = () => {
+    setActiveForm((prev) => --prev);
+  };
   return (
     <>
       <main className="content">
@@ -77,7 +79,7 @@ function Home() {
               </a>
             </div>
           </section>
-          <section className="adbox" id="about">
+          <section className="adbox">
             <div className="wrapper">
               <div className="adbox__box flex">
                 <div className="adbox__left"></div>
@@ -135,7 +137,7 @@ function Home() {
               </div>
             </div>
           </section>
-          <section className="proe" id="proe">
+          <section className="proe">
             <div className="wrapper">
               <div className="proe__heading flex">
                 <img
@@ -250,17 +252,55 @@ function Home() {
           <section className="quiz">
             <div className="wrapper">
               <div className="quiz__box flex">
-                {activeForm === 1 && <QuizModuleOne nextStep={handleClickNextStep} changeFormsValue={handleFormsValue} />}
-                {activeForm === 2 && <QuizModuleTwo nextStep={handleClickNextStep} changeFormsValue={handleFormsValue} />}
-                {activeForm === 3 && <QuizModuleThree nextStep={handleClickNextStep} changeFormsValue={handleFormsValue} />}
-                {activeForm === 4 && <QuizModuleFour nextStep={handleClickNextStep} changeFormsValue={handleFormsValue} />}
-                {activeForm === 5 && <QuizModuleFive nextStep={handleClickNextStep} changeFormsValue={handleFormsValue} />}
-                {activeForm === 6 && <QuizModuleSix nextStep={handleClickNextStep} changeFormsValue={handleFormsValue} />}
-                {activeForm === 7 && <QuizModuleSeven nextStep={handleClickNextStep} changeFormsValue={handleFormsValue} />}
-                <QuizStep stepForm={activeForm}/>
+                {activeForm === 1 && (
+                  <QuizModuleOne
+                    nextStep={handleClickNextStep}
+                    changeFormsValue={handleFormsValue}
+                  />
+                )}
+                {activeForm === 2 && (
+                  <QuizModuleTwo
+                    nextStep={handleClickNextStep}
+                    changeFormsValue={handleFormsValue}
+                    prevStep={handleClickPrevStep}
+                  />
+                )}
+                {activeForm === 3 && (
+                  <QuizModuleThree
+                    nextStep={handleClickNextStep}
+                    changeFormsValue={handleFormsValue}
+                    prevStep={handleClickPrevStep}
+                  />
+                )}
+                {activeForm === 4 && (
+                  <QuizModuleFour
+                    nextStep={handleClickNextStep}
+                    changeFormsValue={handleFormsValue}
+                    prevStep={handleClickPrevStep}
+                  />
+                )}
+                {activeForm === 5 && (
+                  <QuizModuleFive
+                    nextStep={handleClickNextStep}
+                    changeFormsValue={handleFormsValue}
+                    prevStep={handleClickPrevStep}
+                  />
+                )}
+                {activeForm === 6 && (
+                  <QuizModuleSeven
+                    nextStep={handleClickNextStep}
+                    changeFormsValue={handleFormsValue}
+                    prevStep={handleClickPrevStep}
+                    activeForm={setActiveForm}
+                    formsValue={formsValue}
+                  />
+                )}
+
+                <QuizStep stepForm={activeForm} />
               </div>
             </div>
           </section>
+          <Consultation/>
         </div>
       </main>
     </>

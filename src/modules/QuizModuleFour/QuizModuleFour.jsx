@@ -3,7 +3,7 @@ import QuizFirst from "../../components/QuizFirst/QuizFirst";
 import "./quizModuleFour.css";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
-function QuizModuleFour({ changeFormsValue, nextStep }) {
+function QuizModuleFour({ changeFormsValue, nextStep, prevStep }) {
   const [inputsValue, setInputsValue] = useState({
     type: "",
   });
@@ -32,7 +32,7 @@ function QuizModuleFour({ changeFormsValue, nextStep }) {
         <div className="quiz__questions">
           <div className="quiz__question">
             <h2 className="quiz__questionname">
-            4. Какой формат недвижимости более предпочтительный:
+              4. Какой формат недвижимости более предпочтительный:
             </h2>
             <div className="quiz__answers">
               <div className="quiz__answer">
@@ -64,7 +64,7 @@ function QuizModuleFour({ changeFormsValue, nextStep }) {
         </div>
         <div className="quiz__btns flex">
           <button className="quiz__back flex">
-            <ArrowBackIcon />
+            <ArrowBackIcon onClick={prevStep} />
           </button>
           <button
             className="btn2 quiz__next"
