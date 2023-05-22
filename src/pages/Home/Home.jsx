@@ -9,6 +9,7 @@ import QuizModuleFour from "../../modules/QuizModuleFour/QuizModuleFour";
 import QuizModuleFive from "../../modules/QuizModuleFive/QuizModuleFive";
 import QuizModuleSeven from "../../modules/QuizModuleSeven/QuizModuleSeven";
 import Consultation from "../../modules/Consultation/Consultation";
+import PrivilegesCard from "../../components/PrivilegesCard/PrivilegesCard";
 
 function Home() {
   const [activeForm, setActiveForm] = useState(1);
@@ -301,6 +302,22 @@ function Home() {
             </div>
           </section>
           <Consultation/>
+          <section className="privileges">
+            <div className="wrapper">
+              <div className="privileges__top">
+                <h2 className="privileges__top-title">НА КОНСУЛЬТАЦИИ <span>С НАШИМ СПЕЦИАЛИСТОМ</span> </h2>
+                <h3 className="privileges__top-explanation">ВЫ МОЖЕТЕ:</h3>
+              </div>
+              <div className="privileges__bottom">
+                <PrivilegesCard text={"изучить перспективы развития Бали"}/>
+                <PrivilegesCard text={"подобрать варианты дистанционного оформления и оплаты"}/>
+                <PrivilegesCard text={"изучить среднюю стоимость и доходность различных объектов недвижимости"}/>
+                <PrivilegesCard text={"узнать, как подобрать подходящий проект и локацию в зависимости от ваших целей"}/>
+                <PrivilegesCard text={"изучить особенности законодательства и налогообложения Индонезии"}/>
+                <PrivilegesCard text={"запросить онлайн-показ текущих проектов и локаций"}/>
+              </div>
+            </div>
+          </section>
         </div>
       </main>
     </>

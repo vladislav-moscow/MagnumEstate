@@ -648,3 +648,12 @@
 .quiz__next {
   width: 250px;
 }
+
+.privileges__bottom {
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 25px;
+}
